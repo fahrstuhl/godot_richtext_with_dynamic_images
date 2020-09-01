@@ -7,8 +7,7 @@ var official_image_file_endings = ["bmp", "dds", "exr", "hdr", "jpg", "jpeg", "p
 func handles_type(typename: String):
 	return typename == "ImageTexture"
 
-func load(path, original_path):
-	print("Custom loader called.")
+func load(path, _original_path):
 	var image = Image.new()
 	var texture = ImageTexture.new()
 	var err = image.load(path)

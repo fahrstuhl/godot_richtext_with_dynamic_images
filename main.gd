@@ -19,7 +19,12 @@ func load_images_in_text():
 	var imgs = re.search_all(bbcode_with_images)
 	for img in imgs:
 		var path = img.get_string("path")
+		# check that file exists
+		var file = File.new()
+		if not file.file_exists(path):
+			continue
 		# this calls our custom loader to load the image resource into the resource cache
 		var texture = ResourceLoader.load(path, "ImageTexture")
+		if texture is ImageTexture:
 		# the resource seems to need to be persistent, so we store it in the textures attribute
-		textures.append(texture)
+			textures.append(texture)
