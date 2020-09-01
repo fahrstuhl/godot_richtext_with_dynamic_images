@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ResourceFormatLoader",
+"class": "ImageFileLoader",
+"language": "GDScript",
+"path": "res://image_file_loader.gd"
+} ]
+_global_script_class_icons={
+"ImageFileLoader": ""
+}
+
+[application]
+
+config/name="RichText with Dynamic Images"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
