@@ -1,4 +1,3 @@
-tool
 extends RichTextLabel
 
 # needs a new variable so the setter is called (you can't override parent setters in Godot)
